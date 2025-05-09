@@ -110,8 +110,8 @@ double easeOutCirc(double t) {
 
 double easeInOutCirc(double t) {
     return t < 0.5
-        ? (1 - sqrt(1 - 2 * t * t)) * 0.5
-        : (sqrt(1 - (2 * t - 1) * (2 * t - 1)) + 1) * 0.5;
+        ? (1 - sqrt(1 - (2 * t) * (2 * t))) * 0.5
+        : (sqrt(1 - (-2 * t + 2) * (-2 * t + 2)) + 1) * 0.5;
 }
 
 double easeInBack( double t ) {
