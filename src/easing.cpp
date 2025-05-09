@@ -100,20 +100,18 @@ double easeInOutExpo( double t ) {
     }
 }
 
-double easeInCirc( double t ) {
-    return 1 - sqrt( 1 - t );
+double easeInCirc(double t) {
+    return 1 - sqrt(1 - t * t);
 }
 
-double easeOutCirc( double t ) {
-    return sqrt( t );
+double easeOutCirc(double t) {
+    return sqrt(1 - (t - 1) * (t - 1));
 }
 
-double easeInOutCirc( double t ) {
-    if( t < 0.5 ) {
-        return (1 - sqrt( 1 - 2 * t )) * 0.5;
-    } else {
-        return (1 + sqrt( 2 * t - 1 )) * 0.5;
-    }
+double easeInOutCirc(double t) {
+    return t < 0.5
+        ? (1 - sqrt(1 - 2 * t * t)) * 0.5
+        : (sqrt(1 - (2 * t - 1) * (2 * t - 1)) + 1) * 0.5;
 }
 
 double easeInBack( double t ) {
