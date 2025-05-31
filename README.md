@@ -1,5 +1,6 @@
 Easing functions C++
 ================
+(For older versions of C++ (<20), please check out [old](https://github.com/thnhmai06/easing-functions/tree/old) branch) <br/>
 
 30 easing functions implemented in C++. <br/>
 More info how functions look like and their behaviour on [easings.net](http://easings.net/).
